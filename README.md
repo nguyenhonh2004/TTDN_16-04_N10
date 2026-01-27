@@ -1,7 +1,20 @@
-# 📊 BÁO CÁO HỆ THỐNG CHẤM CÔNG – TÍNH LƯƠNG TỰ ĐỘNG  
-## Trên nền tảng Odoo 19
+<h2 align="center">
+    <a href="https://dainam.edu.vn/vi/khoa-cong-nghe-thong-tin">
+        🎓 Faculty of Information Technology (DaiNam University)
+    </a>
+</h2>
 
-![Odoo Banner](https://github.com/user-attachments/assets/d1572174-b9a5-44f7-b7c8-769db9bdac3e)
+<h2 align="center">
+    XÂY DỰNG HỆ THỐNG CHẤM CÔNG-TÍNH LƯƠNG TỰ ĐỘNG
+</h2>
+
+<div align="center">
+    <p align="center">
+        <img alt="AIoTLab Logo" width="170" src="https://github.com/user-attachments/assets/711a2cd8-7eb4-4dae-9d90-12c0a0a208a2" />
+        <img alt="AIoTLab Logo" width="180" src="https://github.com/user-attachments/assets/dc2ef2b8-9a70-4cfa-9b4b-f6c2f25f1660" />
+        <img alt="DaiNam University Logo" width="200" src="https://github.com/user-attachments/assets/77fe0fd1-2e55-4032-be3c-b1a705a1b574" />
+    </p>
+</div>
 
 ---
 
@@ -22,7 +35,8 @@ Việc áp dụng hệ thống tự động hóa trong chấm công và tính l�
 
 Hệ thống chấm công – tính lương trên nền tảng **Odoo ERP** là một giải pháp **khép kín**, bao phủ toàn bộ quy trình từ quản lý hồ sơ nhân sự đến xuất phiếu lương.
 
-### Các chức năng chính:
+### Các chức năng chính
+
 - 🗂️ **Quản lý nhân sự**  
   Lưu trữ tập trung hồ sơ nhân viên, phòng ban, chức vụ và vòng đời hợp đồng.
 
@@ -42,13 +56,13 @@ Hệ thống chấm công – tính lương trên nền tảng **Odoo ERP** là 
 
 ## 🏗️ Cấu trúc hệ thống
 
-Hệ thống được thiết kế theo **kiến trúc module**, liên kết chặt chẽ thông qua cơ sở dữ liệu tập trung:
+Hệ thống được thiết kế theo **kiến trúc module**, liên kết chặt chẽ thông qua cơ sở dữ liệu tập trung.
 
 1. **Module Nhân sự (Core)**  
-   Quản lý thông tin nhân viên, hợp đồng và khung lương cơ bản.
+   Quản lý thông tin nhân viên, hợp đồng lao động và khung lương cơ bản.
 
 2. **Module Chấm công (Center)**  
-   Xử lý dữ liệu hiện diện, đối chiếu ca làm việc và phát hiện đi muộn/về sớm.
+   Xử lý dữ liệu hiện diện, đối chiếu ca làm việc, phát hiện đi muộn – về sớm.
 
 3. **Module Tính lương (Payroll)**  
    Tính toán lương Gross/Net, áp dụng biểu thuế lũy tiến và sinh phiếu lương điện tử.
@@ -62,10 +76,30 @@ Hệ thống được thiết kế theo **kiến trúc module**, liên kết ch�
 - **Cơ sở dữ liệu**: PostgreSQL
 - **Công cụ hỗ trợ**:
   - GitHub (quản lý mã nguồn)
-  - PlantUML (thiết kế sơ đồ)
+  - PlantUML (thiết kế sơ đồ hệ thống)
 - **Tích hợp dữ liệu**:
   - Google Sheets
   - Microsoft Excel
+
+---
+
+## Hình ảnh các MODULE
+<div align="center">
+    <p align="center">
+        <img src="docs/1.jpg" alt="" width="800"/><br/>
+        <i>Hình 1: Module nhân sự<i><br/><br/>
+        <img src="docs/2.jpg" alt="" width="800"/><br/>
+         <i>Hình 2: Module chấm công<i><br/><br/>
+        <img src="docs/3.jpg" alt="" width="800"/><br/>
+        <i>Hình 3: Module tính lương<i><br/><br/>
+         <img src="docs/4.jpg" alt="" width="800"/><br/>
+        <i>Hình 4: chức năng chấm công bằng camera  <i><br/><br/>
+         <img src="docs/5.jpg" alt="" width="800"/><br/>
+         <i>Hình 5:<i><br/><br/>
+         <img src="docs/6.jpg" alt="" width="800"/><br/>
+         <i>Hình 6:<i><br/><br/>
+    </p>
+</div>
 
 ---
 
@@ -74,108 +108,34 @@ Hệ thống được thiết kế theo **kiến trúc module**, liên kết ch�
 ## 1. Cài đặt môi trường Odoo
 
 ### 🔧 Yêu cầu hệ thống
-- **Python**: phiên bản 3.10 trở lên
-- **Cơ sở dữ liệu**: PostgreSQL
+
 - **Hệ điều hành**: Linux / WSL / macOS (khuyến nghị)
+- **Python**: Phiên bản 3.8 trở lên
+- **PostgreSQL**: Phiên bản 12 trở lên
+- **Odoo Server**
+- **Bộ nhớ RAM**: Tối thiểu 2 GB
+- **Port**: 8069
 
 ### 📦 Cài đặt thư viện cần thiết
+
 Sau khi clone source code, chạy lệnh:
 
 ```bash
 pip install -r requirements.txt
 ```
-## 2. Cấu hình quy định Tăng ca (OT)
-Dữ liệu tăng ca (Overtime – OT) được hệ thống tự động xác định dựa trên thời điểm làm việc thực tế:
+---
 
-Ngày thường: Hệ số 150%
-
-Cuối tuần: Hệ số 200%
-
-Ngày Lễ / Tết: Hệ số 300%
-
-## 3. Chạy hệ thống
-Khởi động Odoo Server và cài đặt module tùy chỉnh của nhóm:
-```bash ./odoo-bin -c odoo.conf -i hr_payroll_custom```
-<li>📘 Hướng dẫn sử dụng hệ thống</li>
-a) Thiết lập ban đầu
-Nhập hồ sơ nhân viên
-
-Thiết lập phòng ban
-
-Cấu hình mức lương cơ bản trong module Nhân sự (HR)
-
-b) Phân ca làm việc
-Tạo các loại ca:
-
-Ca sáng : 8h-17h
-
-Ca đêm : 22h-6h
-
-Gán ca cho từng nhân viên
-
-c) Chấm công
-Nhân viên Check-in / Check-out qua:
-
-Giao diện Web
-
-Thiết bị chấm công
-
-Hệ thống tự động
-
-Đối chiếu ca làm việc
-
-Phát hiện đi muộn / về sớm
-
-d) Kết xuất bảng lương
-Cuối kỳ, bộ phận kế toán:
-
-Kiểm tra bảng tổng hợp công
-
-Nhấn “Sinh phiếu lương” (Payslip)
-
-⚙️ Công thức tính toán cốt lõi
-1. Lương thực tế
-Lương thực tế = (Lương cơ bản / Công chuẩn) × Công thực tế
-Công chuẩn: 26 ngày/tháng
-
-2. Khấu trừ bảo hiểm
-Tổng mức khấu trừ: 10.5% lương đóng bảo hiểm, bao gồm:
-
-<li>BHXH: 8%</li>
-
-<li>BHYT: 1.5%</li>
-
-<li>BHTN: 1%</li>
-
-3. Lương Net
-Lương Net = Lương Gross - Bảo hiểm - Thuế TNCN
-📰 Báo cáo & Phân tích dữ liệu
-Hệ thống hỗ trợ:
-
-Phát hiện bất thường (Anomaly Detection) bằng AI
-
-Gắn cờ các trường hợp:
-
-Quên chấm công
-
-Quỹ lương dự báo vượt mức cho phép
-
-🤝 Đóng góp & Thông tin nhóm
+## Đóng góp & Thông tin nhóm
 Dự án được thực hiện bởi:
+- Họ và tên: Nguyễn Thu Hồng
+- SDT: 0853972752
+- Email: nguyenhongnunu@gmail.com
+- Họ và tên: Nguyễn Văn Giang
+- SDT: 0353397306
+- Email:  giangnguyen27112k4@gmail.com
+- Họ và tên: Nguyễn Văn Bắc
+- SDT: 0876476687
+- Email: nguyenbacdz04@gmail.com
 
-Nhóm 10 – CNTT 16-04
-
-Trường Đại học Đại Nam
-
-Thành viên:
-
-Nguyễn Văn Bắc – 1671020038
-
-Nguyễn Văn Giang – 1671020094
-
-Nguyễn Thu Hồng – 1671020131
-
-Giảng viên hướng dẫn:
-TS. Trần Đăng Công
-
-© 2026 AIoTLab, Khoa Công nghệ Thông tin, Đại học Đại Nam. Mọi quyền được bảo lưu.
+- © 2026 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
+---
