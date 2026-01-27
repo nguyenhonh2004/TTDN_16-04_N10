@@ -83,7 +83,7 @@ Hệ thống được thiết kế theo **kiến trúc module**, liên kết ch�
 
 ---
 
-## Hình ảnh các MODULE
+## 🖼️ Hình ảnh các MODULE
 <div align="center">
     <p align="center">
         <img src="docs/1.jpg" alt="" width="800"/><br/>
@@ -125,7 +125,16 @@ pip install -r requirements.txt
 ```
 ---
 
-## Đóng góp & Thông tin nhóm
+## 📰 Poster
+<div align="center">
+    <p align="center">
+        <img src="docs/1.jpg" alt="" width="800"/><br/>
+    </p>
+</div> 
+
+---
+
+## 🤝Đóng góp & Thông tin nhóm
 Dự án được thực hiện bởi:
 - Họ và tên: Nguyễn Thu Hồng
 - SDT: 0853972752
