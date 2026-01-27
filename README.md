@@ -141,11 +141,11 @@ Công chuẩn: 26 ngày/tháng
 2. Khấu trừ bảo hiểm
 Tổng mức khấu trừ: 10.5% lương đóng bảo hiểm, bao gồm:
 
-BHXH: 8%
+<li>BHXH: 8%</li>
 
-BHYT: 1.5%
+<li>BHYT: 1.5%</li>
 
-BHTN: 1%
+<li>BHTN: 1%</li>
 
 3. Lương Net
 Lương Net = Lương Gross - Bảo hiểm - Thuế TNCN
