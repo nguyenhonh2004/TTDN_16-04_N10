@@ -162,11 +162,20 @@ Quỹ lương dự báo vượt mức cho phép
 
 🤝 Đóng góp & Thông tin nhóm
 Dự án được thực hiện bởi:
+
 Nhóm 10 – CNTT 16-04
+
 Trường Đại học Đại Nam
+
 Thành viên:
+
 Nguyễn Văn Bắc – 1671020038
+
 Nguyễn Văn Giang – 1671020094
+
 Nguyễn Thu Hồng – 1671020131
+
 Giảng viên hướng dẫn:
 TS. Trần Đăng Công
+
+© 2026 AIoTLab, Khoa Công nghệ Thông tin, Đại học Đại Nam. Mọi quyền được bảo lưu.
