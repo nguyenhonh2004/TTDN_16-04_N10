@@ -18,114 +18,129 @@
 
 ---
 
-## 🧭 Giới thiệu chung
+---
 
-Quản trị nhân sự là **nòng cốt của sự ổn định và phát triển doanh nghiệp**.  
-Việc áp dụng hệ thống tự động hóa trong chấm công và tính lương giúp:
+## 1. Giới thiệu hệ thống
 
-- Tối ưu hóa quy trình vận hành  
-- Giảm thiểu sai sót thủ công  
-- Đảm bảo tính **minh bạch – chính xác – kịp thời** trong chi trả quyền lợi cho người lao động  
+Đây là **hệ thống quản lý tiền lương và bảo hiểm y tế (BHYT)** được xây dựng trên nền tảng **Odoo 19**, theo hướng **module hóa và tùy biến**, phục vụ mục tiêu **nghiên cứu học thuật và đồ án tốt nghiệp**.
 
-Đề tài tập trung xây dựng **giải pháp quản trị nhân sự tập trung** trên nền tảng **ERP Odoo 19**, tích hợp chặt chẽ giữa chấm công, tiền lương và báo cáo phân tích.
+Hệ thống **không sử dụng module payroll mặc định của Odoo**, mà triển khai một giải pháp tính lương riêng (BJ Payroll), cho phép chủ động trong thiết kế nghiệp vụ và mở rộng trong tương lai.
 
 ---
 
-## 📌 Giới thiệu hệ thống
+### 🎯 Mục tiêu chính
 
-Hệ thống chấm công – tính lương trên nền tảng **Odoo ERP** là một giải pháp **khép kín**, bao phủ toàn bộ quy trình từ quản lý hồ sơ nhân sự đến xuất phiếu lương.
-
-### Các chức năng chính
-
-- 🗂️ **Quản lý nhân sự**  
-  Lưu trữ tập trung hồ sơ nhân viên, phòng ban, chức vụ và vòng đời hợp đồng.
-
-- 🕒 **Ghi nhận chấm công**  
-  Hỗ trợ nhiều nguồn dữ liệu: nhập tay, camera, API thiết bị ngoại vi.
-
-- ⚖️ **Tự động tính lương**  
-  Tính lương dựa trên công thực tế, hệ số tăng ca và các khoản phụ cấp.
-
-- 🛡️ **Bảo hiểm & Thuế**  
-  Khấu trừ tự động BHXH, BHYT, BHTN và thuế TNCN theo quy định pháp luật.
-
-- 📊 **Báo cáo thông minh**  
-  Dashboard trực quan theo dõi quỹ lương và hiệu suất làm việc.
+- Xây dựng hệ thống **tính lương tùy biến** dựa trên dữ liệu chấm công  
+- Tích hợp **bảo hiểm y tế (BHYT)** cho người lao động và doanh nghiệp  
+- Đảm bảo **tính chính xác – minh bạch – nhất quán dữ liệu**  
+- Phù hợp cho **đào tạo, nghiên cứu và mô phỏng nghiệp vụ doanh nghiệp**
 
 ---
 
-## 🏗️ Cấu trúc hệ thống
+### 🧩 Các chức năng chính
 
-Hệ thống được thiết kế theo **kiến trúc module**, liên kết chặt chẽ thông qua cơ sở dữ liệu tập trung.
-
-1. **Module Nhân sự (Core)**  
-   Quản lý thông tin nhân viên, hợp đồng lao động và khung lương cơ bản.
-
-2. **Module Chấm công (Center)**  
-   Xử lý dữ liệu hiện diện, đối chiếu ca làm việc, phát hiện đi muộn – về sớm.
-
-3. **Module Tính lương (Payroll)**  
-   Tính toán lương Gross/Net, áp dụng biểu thuế lũy tiến và sinh phiếu lương điện tử.
+- 👤 **Quản lý nhân viên**
+- ⏱ **Chấm công và tổng hợp theo tháng**
+- 💰 **Quản lý bảng lương (Payslip)**
+- 🏥 **Tích hợp bảo hiểm y tế (BHYT)**
 
 ---
 
-## 🛠️ Công cụ và công nghệ sử dụng
+## ⚙️ 2. Công nghệ sử dụng
 
-- **Ngôn ngữ**: Python (xử lý logic nghiệp vụ, ORM)
-- **Nền tảng**: Odoo 19 (ERP mã nguồn mở)
-- **Cơ sở dữ liệu**: PostgreSQL
-- **Công cụ hỗ trợ**:
-  - GitHub (quản lý mã nguồn)
-  - PlantUML (thiết kế sơ đồ hệ thống)
-- **Tích hợp dữ liệu**:
-  - Google Sheets
-  - Microsoft Excel
+### 💻 Nền tảng chính
+- **Odoo 19**
+- **Python (Odoo ORM)**
+- **PostgreSQL**
 
----
-
-## 🖼️ Hình ảnh các MODULE
-<div align="center">
-    <p align="center">
-        <img src="docs/1.jpg" alt="" width="800"/><br/>
-        <i>Hình 1: Module nhân sự<i><br/><br/>
-        <img src="docs/2.jpg" alt="" width="800"/><br/>
-         <i>Hình 2: Module chấm công<i><br/><br/>
-        <img src="docs/3.jpg" alt="" width="800"/><br/>
-        <i>Hình 3: Module tính lương<i><br/><br/>
-         <img src="docs/4.jpg" alt="" width="800"/><br/>
-        <i>Hình 4: chức năng chấm công bằng camera  <i><br/><br/>
-         <img src="docs/5.jpg" alt="" width="800"/><br/>
-         <i>Hình 5:<i><br/><br/>
-         <img src="docs/6.jpg" alt="" width="800"/><br/>
-         <i>Hình 6:<i><br/><br/>
-    </p>
-</div>
+### 🧩 Kiến trúc hệ thống
+- Module lõi: `bj_payroll_core`
+- Module mở rộng: `bj_health_insurance`
+- Custom model: `bj.hr.payslip`
 
 ---
 
-# 🚀 Hướng dẫn cài đặt và vận hành hệ thống
+## 3. Một số hình ảnh hệ thống
 
-## 1. Cài đặt môi trường Odoo
+<p align="center">
+    <em>Danh sách bảng lương (Payslip List View)</em><br/>
+    <img width="624" height="351" alt="image" src="https://github.com/user-attachments/assets/c4665aec-88d2-44d1-af7a-92bec7af7a75" />
 
-### 🔧 Yêu cầu hệ thống
+</p>
 
-- **Hệ điều hành**: Linux / WSL / macOS (khuyến nghị)
-- **Python**: Phiên bản 3.8 trở lên
-- **PostgreSQL**: Phiên bản 12 trở lên
-- **Odoo Server**
-- **Bộ nhớ RAM**: Tối thiểu 2 GB
-- **Port**: 8069
+<p align="center">
+    <em>Chi tiết bảng lương và bảo hiểm y tế (BHYT)</em><br/>
+    <img width="212" height="150" alt="image" src="https://github.com/user-attachments/assets/da6a5a65-60a2-4840-b201-26c3a606b7ef" />
 
-### 📦 Cài đặt thư viện cần thiết
+</p>
 
-Sau khi clone source code, chạy lệnh:
+<p align="center">
+    <em>Chức năng chấm công và tổng hợp theo tháng</em><br/>
+    <img width="624" height="293" alt="image" src="https://github.com/user-attachments/assets/ff820bd0-de04-4a31-947c-76cb6c9a48c7" />
+
+</p>
+
+---
+
+## 🛠️ 4. Hướng dẫn cài đặt & triển khai
+
+### 4.1. Yêu cầu hệ thống
+- 🐍 Python >= 3.10  
+- 🐘 PostgreSQL  
+- 🐳 Docker (khuyến nghị)  
+- 🌐 Trình duyệt web hiện đại
+
+---
+
+### 📦 4.2. Clone dự án
 
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/<username>/bj-payroll-odoo19.git
+cd bj-payroll-odoo19
 ```
+
 ---
 
-## 📰 Poster
+### 🔧 4.3. Cài đặt module
+
+1. Sao chép các module sau vào thư mục `addons` của Odoo:
+   - `bj_payroll_core`
+   - `bj_health_insurance`
+
+2. Cập nhật module trong cơ sở dữ liệu:
+
+```bash
+./odoo-bin -d your_database -u bj_payroll_core,bj_health_insurance
+```
+
+---
+
+### ▶️ 4.4. Chạy hệ thống
+
+```bash
+./odoo-bin -c odoo.conf
+```
+
+Truy cập hệ thống tại:
+
+```
+http://localhost:8069
+```
+
+---
+
+### ✅ 4.5. Kiểm tra hoạt động
+
+1. Tạo nhân viên  
+2. Chấm công cho nhân viên  
+3. Tạo payslip theo tháng  
+4. Nạp dữ liệu chấm công  
+5. Compute lương  
+6. Kiểm tra kết quả BHYT  
+
+---
+
+## 5. 📰 Poster
 <div align="center">
     <p align="center">
         <img src="docs/1.jpg" alt="" width="800"/><br/>
@@ -134,7 +149,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🤝Đóng góp & Thông tin nhóm
+## 6. 🤝Đóng góp & Thông tin nhóm
 Dự án được thực hiện bởi:
 - Họ và tên: Nguyễn Thu Hồng
 - SDT: 0853972752
