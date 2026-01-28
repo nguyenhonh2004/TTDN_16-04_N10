@@ -170,7 +170,8 @@ http://localhost:8069
 <div align="center">
     <p align="center">
         <img src="docs/1.jpg" alt="" width="800"/><br/>
-@@ -134,7 +149,7 @@ pip install -r requirements.txt
+    </p>
+</div>
 
 ---
 
