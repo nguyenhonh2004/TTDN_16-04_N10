@@ -3,32 +3,31 @@
     🎓 Faculty of Information Technology (DaiNam University)
     </a>
 </h2>
-
 <h2 align="center">
-   🚀 Hệ thống chấm công và tính lương trên Odoo 19
+    XÂY DỰNG HỆ THỐNG CHẤM LƯƠNG VÀ TÍNH CÔNG TỰ ĐỘNG
 </h2>
-
 <div align="center">
     <p align="center">
-        <img width="170"  alt="AIoTLab Logo" src="https://github.com/user-attachments/assets/722ef6fe-9b09-41f4-9d58-a752e2be9da4" />
-        <img width="170" alt="FIT DNU Logo" src="https://github.com/user-attachments/assets/38f342e5-4c81-4d22-b1d0-985cf91c702c" />
-        <img width="200" alt="DaiNam University" src="https://github.com/user-attachments/assets/11138726-5355-4c53-9fdb-bec177681ae0" />
+        <img alt="AIoTLab Logo" width="170" src="https://github.com/user-attachments/assets/711a2cd8-7eb4-4dae-9d90-12c0a0a208a2" />
+        <img alt="AIoTLab Logo" width="180" src="https://github.com/user-attachments/assets/dc2ef2b8-9a70-4cfa-9b4b-f6c2f25f1660" />
+        <img alt="DaiNam University Logo" width="200" src="https://github.com/user-attachments/assets/77fe0fd1-2e55-4032-be3c-b1a705a1b574" />
     </p>
 
-<div align="center">
-
-[![Odoo](https://img.shields.io/badge/Odoo-19-purple?style=for-the-badge)](https://www.odoo.com/)
-[![BJ Payroll](https://img.shields.io/badge/BJ%20Payroll-Custom-blue?style=for-the-badge)](#)
+[![AIoTLab](https://img.shields.io/badge/AIoTLab-green?style=for-the-badge)](https://www.facebook.com/DNUAIoTLab)
+[![Faculty of Information Technology](https://img.shields.io/badge/Faculty%20of%20Information%20Technology-blue?style=for-the-badge)](https://dainam.edu.vn/vi/khoa-cong-nghe-thong-tin)
 [![DaiNam University](https://img.shields.io/badge/DaiNam%20University-orange?style=for-the-badge)](https://dainam.edu.vn)
 
-</div>
 </div>
 
 ---
 
+
 ## 1. Giới thiệu hệ thống
 
+
 Đây là **hệ thống quản lý tiền lương và bảo hiểm y tế (BHYT)** được xây dựng trên nền tảng **Odoo 19**, theo hướng **module hóa và tùy biến**, phục vụ mục tiêu **nghiên cứu học thuật và đồ án tốt nghiệp**.
+
+
 
 Hệ thống **không sử dụng module payroll mặc định của Odoo**, mà triển khai một giải pháp tính lương riêng (BJ Payroll), cho phép chủ động trong thiết kế nghiệp vụ và mở rộng trong tương lai.
 
@@ -52,7 +51,9 @@ Hệ thống **không sử dụng module payroll mặc định của Odoo**, mà
 
 ---
 
+
 ## ⚙️ 2. Công nghệ sử dụng
+
 
 ### 💻 Nền tảng chính
 - **Odoo 19**
@@ -73,6 +74,7 @@ Hệ thống **không sử dụng module payroll mặc định của Odoo**, mà
     <img width="624" height="351" alt="image" src="https://github.com/user-attachments/assets/c4665aec-88d2-44d1-af7a-92bec7af7a75" />
 
 </p>
+
 
 <p align="center">
     <em>Chi tiết bảng lương và bảo hiểm y tế (BHYT)</em><br/>
@@ -96,6 +98,10 @@ Hệ thống **không sử dụng module payroll mặc định của Odoo**, mà
 - 🐳 Docker (khuyến nghị)  
 - 🌐 Trình duyệt web hiện đại
 
+
+
+
+
 ---
 
 ### 📦 4.2. Clone dự án
@@ -104,6 +110,17 @@ Hệ thống **không sử dụng module payroll mặc định của Odoo**, mà
 git clone https://github.com/<username>/bj-payroll-odoo19.git
 cd bj-payroll-odoo19
 ```
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
@@ -118,6 +135,9 @@ cd bj-payroll-odoo19
 ```bash
 ./odoo-bin -d your_database -u bj_payroll_core,bj_health_insurance
 ```
+
+
+
 
 ---
 
@@ -146,15 +166,24 @@ http://localhost:8069
 
 ---
 
-## 📞 5. Thông tin sinh viên thực hiện
-
-- 👤 **Sinh viên:** Giang Nguyễn, Bắc Nguyễn, Thu Hồng
-- 🎓 **Khoa:** Công nghệ Thông tin – Đại học Đại Nam  
-- 📧 **Email:** giangnguyen27112k4@gmail.com  
-- 📞 **SĐT:** 0353397306  
+## 5. 📰 Poster
+<div align="center">
+    <p align="center">
+        <img src="docs/1.jpg" alt="" width="800"/><br/>
+@@ -134,7 +149,7 @@ pip install -r requirements.txt
 
 ---
 
-<p align="center">
-✨ <em>README được xây dựng cho kết thúc môn: Hệ thống quản lý tiền lương và bảo hiểm y tế trên nền tảng Odoo 19.</em>
-</p>
+## 6. 🤝Đóng góp & Thông tin nhóm
+Dự án được thực hiện bởi:
+- Họ và tên: Nguyễn Thu Hồng
+- SDT: 0853972752
+- Email: nguyenhongnunu@gmail.com
+- Họ và tên: Nguyễn Văn Giang
+- SDT: 0353397306
+- Email:  giangnguyen27112k4@gmail.com
+- Họ và tên: Nguyễn Văn Bắc
+- SDT: 0876476687
+- Email: nguyenbacdz04@gmail.com
+- © 2026 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
+
