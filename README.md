@@ -169,7 +169,7 @@ http://localhost:8069
 ## 5. 📰 Poster
 <div align="center">
     <p align="center">
-        <img src="docs/1.jpg" alt="" width="800"/><br/>
+        <img src="Poster.pdf" alt="" width="800"/><br/>
     </p>
 </div>
 
